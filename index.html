@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Estoque de Camisas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="wrap">
+    <h1>Estoque de Camisas</h1>
+    <p class="sub">Atualize criando/fechando itens no GitHub (Issues). Sem CSV.</p>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <div class="row">
+        <label class="lbl">Usuário</label>
+        <input id="owner" placeholder="ex: seuusuario" />
+        <label class="lbl">Repositório</label>
+        <input id="repo" placeholder="ex: estoque-camisas" />
+        <button id="btnLoad">Carregar</button>
+      </div>
+
+      <div class="filters">
+        <input id="q" placeholder="Buscar (time, modelo, cor...)" />
+        <select id="fTime"><option value="">Time (todos)</option></select>
+        <select id="fModelo"><option value="">Modelo (todos)</option></select>
+        <select id="fTamanho"><option value="">Tamanho (todos)</option></select>
+        <select id="fStatus">
+          <option value="">Status (todos)</option>
+          <option value="open">Em estoque</option>
+          <option value="closed">Vendido/Esgotado</option>
+        </select>
+      </div>
+
+      <div class="kpis" id="kpis"></div>
+
+      <div class="tableWrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Modelo</th>
+              <th>Versão</th>
+              <th>Cor</th>
+              <th>Tam.</th>
+              <th>Qtd</th>
+              <th>Preço</th>
+              <th>Status</th>
+              <th>Obs</th>
+            </tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+
+      <div class="footnote" id="updated"></div>
+      <div class="footnote" id="hint"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
