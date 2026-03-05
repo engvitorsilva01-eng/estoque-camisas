@@ -8,22 +8,29 @@
 </head>
 <body>
   <header class="wrap">
-    <h1>Estoque de Camisas</h1>
-    <p class="sub">Atualize criando/fechando itens no GitHub (Issues). Sem CSV.</p>
+    <div class="top">
+      <div>
+        <h1>Estoque de Camisas</h1>
+        <p class="sub">Atualize criando/fechando itens no GitHub (Issues). Sem CSV.</p>
+      </div>
+      <div class="pill" id="pillStatus">Pronto</div>
+    </div>
+
+    <div class="row" id="repoBox">
+      <label class="lbl">Usuário</label>
+      <input id="owner" placeholder="ex: engvitorsilva01-eng" />
+      <label class="lbl">Repositório</label>
+      <input id="repo" placeholder="ex: estoque-camisas" />
+      <button id="btnLoad">Carregar</button>
+    </div>
+
+    <div class="note" id="note"></div>
   </header>
 
   <main class="wrap">
     <section class="card">
-      <div class="row">
-        <label class="lbl">Usuário</label>
-        <input id="owner" placeholder="ex: seuusuario" />
-        <label class="lbl">Repositório</label>
-        <input id="repo" placeholder="ex: estoque-camisas" />
-        <button id="btnLoad">Carregar</button>
-      </div>
-
       <div class="filters">
-        <input id="q" placeholder="Buscar (time, modelo, cor...)" />
+        <input id="q" placeholder="Buscar (time, modelo, cor, obs...)" />
         <select id="fTime"><option value="">Time (todos)</option></select>
         <select id="fModelo"><option value="">Modelo (todos)</option></select>
         <select id="fTamanho"><option value="">Tamanho (todos)</option></select>
@@ -55,10 +62,16 @@
         </table>
       </div>
 
-      <div class="footnote" id="updated"></div>
-      <div class="footnote" id="hint"></div>
+      <div class="foot">
+        <div class="footnote" id="updated"></div>
+        <div class="footnote" id="hint"></div>
+      </div>
     </section>
   </main>
+
+  <footer class="wrap footer">
+    <span>Dica: crie uma Issue com o formato <strong>campo: valor</strong>.</span>
+  </footer>
 
   <script src="app.js"></script>
 </body>
