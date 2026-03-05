@@ -1,0 +1,59 @@
+name: Novo item de estoque
+description: Cadastrar uma camisa no estoque (sem planilha)
+title: "[ESTOQUE] "
+labels: ["estoque"]
+body:
+  - type: input
+    id: time
+    attributes:
+      label: Time
+      placeholder: Flamengo
+    validations:
+      required: true
+  - type: input
+    id: modelo
+    attributes:
+      label: Modelo
+      placeholder: 2026
+    validations:
+      required: true
+  - type: input
+    id: versao
+    attributes:
+      label: Versão
+      placeholder: Torcedor ou Jogador
+    validations:
+      required: true
+  - type: input
+    id: cor
+    attributes:
+      label: Cor
+      placeholder: Vermelha / Branca / Preta
+    validations:
+      required: true
+  - type: input
+    id: tamanho
+    attributes:
+      label: Tamanho
+      placeholder: P / M / G / GG / 2XL / 3XL / 4XL
+    validations:
+      required: true
+  - type: input
+    id: quantidade
+    attributes:
+      label: Quantidade
+      placeholder: "1"
+    validations:
+      required: true
+  - type: input
+    id: preco
+    attributes:
+      label: Preço
+      placeholder: "130"
+    validations:
+      required: true
+  - type: textarea
+    id: observacao
+    attributes:
+      label: Observação
+      placeholder: pronta entrega / Nike / personalizado etc.
